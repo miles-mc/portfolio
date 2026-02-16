@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miles McCulloch | Portfolio</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    header {
+        background: #222;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 0;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 14px;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    section {
+        padding: 10px 20px;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 28px;
+    }
+
+    .about p {
+        text-align: center;
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 20px;
+    }
+
+    .project-card {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        transition: transform 0.2s ease;
+    }
+
+    .project-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    }
+
+    .project-card:hover {
+        transform: translateY(-5px);
+    }
+
+    a:link {
+        text-decoration: none
+    }
+
+    a:visited {
+        text-decoration: none;
+    }
+    .project-card {
+    overflow: hidden;
+    }
+
+    .project-card img {
+    transition: transform 0.3s ease;
+    }
+
+    .project-card:hover img {
+    transform: scale(1.05);
+    }
+
+    .project-card h3 {
+        margin-top: 0;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #222;
+        color: white;
+        font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+        nav a {
+            display: block;
+            margin: 10px 0;
+        }
+    }
+
+    .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 1000;
+    }
+
+    .modal:target {
+    display: flex;
+    }
+
+    .modal-content {
+    background: white;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 25px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    }
+
+    .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    text-decoration: none;
+    font-size: 28px;
+    color: #333;
+    font-weight: bold;
+    }
+
+    .modal-content img {
+    width: 100%;
+     height: auto;          
+     max-height: 60vh;     
+    object-fit: contain;  
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Miles McCulloch</h1>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="https://www.linkedin.com/in/miles-mcculloch/" target="_blank">LinkedIn</a>
+    </nav>
+</header>
+
+<section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+        Hi, I'm Miles.<br>
+        I enjoy using data to solve problems and drive decision making.
+    </p>
+
+    <p>After spending 3 years studying Software Development and 11 years as a personal carer I've recently finished a full time Data Analytics programme with Generation UK, and am now looking to apply my strong analytical and problem solving skills to a new career in data.
+
+    </p>
+    <p> Contact me at <a href="mailto:miles.mcculloch00@gmail.com">miles.mcculloch00@gmail.com</a></p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="project-card">
+            <a href="#project2-modal">
+                <img src="images/PowerBI Project.png" alt="PowerBI Project Screenshot">
+                <h3>Electronics Store Dashboard</h3>
+            </a>
+        </div>
+        <div class="project-card">
+            <a href="#project3-modal">
+                <img src="images/Record Store Sales.png" alt="Record Store Sales Dashboard Screenshot">
+                <h3>Record Store Sales Dashboard</h3>
+            </a>
+        </div>
+        <div class="project-card">
+            <a href="#project5-modal">
+                <img src="images/Interim Sales and Employee2.png" alt="Sales and Employee Screenshot">
+                <h3>AdventureWorks2019 Project</h3>
+            </a>
+        </div>
+        <div class="project-card">
+            <a href="#project1-modal">
+                <img src="images/Olist Customer Reviews Dashboard.png" alt="Brazilian E-Commerce Project Screenshot">
+                <h3>Brazilian E-Commerce Project</h3>
+            </a>
+        </div>
+        <div class="project-card">
+           <a href="#project6-modal">
+               <img src="images/SQL Task.png" alt="SQL Task">
+               <h3>SQL Task</h3>
+           </a>
+        </div>
+        <div class="project-card">
+            <a href="#project4-modal">
+                <img src="images/AvocadoExcel2.png" alt="Avocado Sales Dashboard Screenshot">
+                <h3>Avocado Sales Excel Project</h3>
+            </a>
+        </div>
+    </div>
+</section>
+
+<div id="project1-modal" class="modal">
+  <div class="modal-content">
+    <a href="#" class="close">×</a>
+
+    <h2>Brazilian E-Commerce Project</h2>
+    <img src="images/Olist Customer Reviews Dashboard.png" alt="Project 1 screenshot">
+
+    <p>
+      A group project where I was tasked with translating over 30,000 customer reviews from Portuguese to English in order to perform sentiment analysis. Insights were given in a presentation to stakeholders.
+    </p>
+
+    <a href="https://github.com/miles-mc/Brazilian-E-Commerce-Project" target="_blank">View Project & Code on GitHub</a>
+  </div>
+</div>
+
+<div id="project2-modal" class="modal">
+  <div class="modal-content">
+    <a href="#" class="close">×</a>
+
+    <h2>Electronics Store Dashboard</h2>
+    <img src="images/PowerBI Project.png" alt="Project 2 screenshot">
+
+    <p>
+      A PowerBI dashboard used to visualise sales data for an electronics store. Everything from cleaning to visualisation was completed solely in PowerBI.
+    </p>
+
+    <a href="https://github.com/miles-mc/Electronics-Store-Dashboard" target="_blank">View Project & Code on GitHub</a>
+  </div>
+</div>
+
+<div id="project3-modal" class="modal">
+  <div class="modal-content">
+    <a href="#" class="close">×</a>
+
+    <h2>Record Store Sales Dashboard</h2>
+    <img src="images/Record Store Sales.png" alt="Project 3 screenshot">
+
+    <p>
+      A PowerBI dashboard used to visualise sales data for a record store and an accompanying client facing presentation explaining the benefits.
+    </p>
+
+    <a href="https://github.com/miles-mc/Record-Store-Sales-Dashboard" target="_blank">View Project & Code on GitHub</a>
+  </div>
+</div>
+
+<div id="project4-modal" class="modal">
+  <div class="modal-content">
+    <a href="#" class="close">×</a>
+
+    <h2>Avocado Sales Excel Project</h2>
+    <img src="images/AvocadoExcel2.png" alt="Project 4 screenshot">
+
+    <p>
+      My first dashboard. Created purely in Excel and showing sales statistics of an avocado producer.
+    </p>
+
+    <a href="https://github.com/miles-mc/Avocado-Sales-Excel-Project" target="_blank">View Project & Code on GitHub</a>
+  </div>
+</div>
+
+<div id="project5-modal" class="modal">
+  <div class="modal-content">
+    <a href="#" class="close">×</a>
+
+    <h2>AdventureWorks2019 Project</h2>
+    <img src="images/Interim Sales and Employee2.png" alt="Project 5 screenshot">
+
+    <p>
+      A group project where we were provided with the AdventureWorks2019 dataset and given 6 questions to be answered in both a report and in a client facing presentation. Data was cleaned in SQL and visualisations were created using matplotlib.
+    </p>
+
+    <a href="https://github.com/miles-mc/AdventureWorks2019" target="_blank">View Project & Code on GitHub</a>
+  </div>
+</div>
+
+<div id="project6-modal" class="modal">
+  <div class="modal-content">
+    <a href="#" class="close">×</a>
+
+    <h2>SQL Task</h2>
+    <img src="images/SQL Task.png" alt="Project 6 screenshot">
+
+    <p>
+      I was provided with a SQL file that created the database and tasked with answering 5 questions about the dataset.
+    </p>
+
+    <a href="https://github.com/miles-mc/SQL-Task" target="_blank">View Project & Code on GitHub</a>
+  </div>
+</div>
+
+<footer>
+    © 2026 Miles McCulloch 
+
+</body>
+</html>
