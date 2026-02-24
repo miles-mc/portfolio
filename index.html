@@ -336,15 +336,29 @@
 
 </body>
     <script>
+//close modal on exterior click
   const modals = document.querySelectorAll('.modal');
-
+  
   modals.forEach(modal => {
     modal.addEventListener('click', (event) => {
       if (event.target === modal) {
+        //close modal by removing hash from URL
         window.location.hash = '';
       }
     });
   });
+//close modal on escape key press
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      //check if a modal is open
+      const openModal = document.querySelector('.modal:target');
+      if (openModal) {
+        //close modal by removing hash from URL
+        window.location.hash = '';
+      }
+    }
+  });
 </script>
 </html>
+
 
