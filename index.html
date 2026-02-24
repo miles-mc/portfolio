@@ -181,6 +181,7 @@
     <nav>
         <a href="#about">About Me</a>
         <a href="#projects">Projects</a>
+        <a href="https://github.com/miles-mc" target="_blank">GitHub</a>
         <a href="https://www.linkedin.com/in/miles-mcculloch/" target="_blank">LinkedIn</a>
     </nav>
 </header>
@@ -334,4 +335,16 @@
     © 2026 Miles McCulloch 
 
 </body>
+    <script>
+  const modals = document.querySelectorAll('.modal');
+
+  modals.forEach(modal => {
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        window.location.hash = '';
+      }
+    });
+  });
+</script>
 </html>
+
